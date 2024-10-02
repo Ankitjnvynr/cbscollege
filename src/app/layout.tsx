@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Navbar, Footer } from '@/components';
+import { Navbar, Footer, WhatsAppChat } from '@/components';
 
 import "./globals.css";
 
@@ -44,6 +44,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar></Navbar>
+        <WhatsAppChat></WhatsAppChat>
         {children}
         <Footer></Footer>
 
