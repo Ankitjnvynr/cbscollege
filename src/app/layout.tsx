@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import { Navbar, Footer } from '@/components';
+
 import "./globals.css";
 
 // In your component or page (e.g., Navbar.js)
