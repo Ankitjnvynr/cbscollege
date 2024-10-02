@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import "./globals.css";
+
+// In your component or page (e.g., Navbar.js)
+import '@/css/animate.css';
+import '@/css/bootstrap.css';
+import '@/css/flexslider.css';
+import '@/css/icomoon.css';
+import '@/css/magnific-popup.css';
+import '@/css/owl.carousel.min.css';
+import '@/css/owl.theme.default.min.css';
+import '@/css/pricing.css';
+import '@/css/style.css';
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +42,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar></Navbar>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );
