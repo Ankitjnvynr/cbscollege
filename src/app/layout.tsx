@@ -14,6 +14,7 @@ import '@/css/owl.carousel.min.css';
 import '@/css/owl.theme.default.min.css';
 import '@/css/pricing.css';
 import '@/css/style.css';
+import Script from "next/script";
 
 
 const geistSans = localFont({
@@ -45,6 +46,38 @@ export default function RootLayout({
         <Navbar></Navbar>
         {children}
         <Footer></Footer>
+
+
+
+        {/* Load jQuery first */}
+        <Script src="/js/jquery.min.js" strategy="beforeInteractive" />
+
+        {/* Load Bootstrap after jQuery */}
+        <Script src="/js/bootstrap.min.js" strategy="afterInteractive" />
+
+        {/* Load Owl Carousel after jQuery */}
+        <Script src="/js/owl.carousel.min.js" strategy="afterInteractive" />
+
+        {/* Load Google Maps API with your API key */}
+        <Script
+          src={`https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`}
+          strategy="afterInteractive"
+        />
+
+        {/* Load other JavaScript files */}
+        <Script src="/js/google_map.js" strategy="afterInteractive" />
+        <Script src="/js/jquery.countTo.js" strategy="afterInteractive" />
+        <Script src="/js/jquery.easing.1.3.js" strategy="afterInteractive" />
+        <Script src="/js/jquery.flexslider-min.js" strategy="afterInteractive" />
+        <Script src="/js/jquery.magnific-popup.min.js" strategy="afterInteractive" />
+        <Script src="/js/jquery.stellar.min.js" strategy="afterInteractive" />
+        <Script src="/js/jquery.waypoints.min.js" strategy="afterInteractive" />
+        <Script src="/js/magnific-popup-options.js" strategy="afterInteractive" />
+        <Script src="/js/main.js" strategy="afterInteractive" />
+        <Script src="/js/modernizr-2.6.2.min.js" strategy="afterInteractive" />
+        <Script src="/js/respond.min.js" strategy="afterInteractive" />
+        <Script src="/js/simplyCountdown.js" strategy="afterInteractive" />
+
       </body>
     </html>
   );
